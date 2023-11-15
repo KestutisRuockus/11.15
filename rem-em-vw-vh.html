@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rem-em-vw-vh</title>
+    <style>
+      html {
+        font-size: 26px;
+      }
+      body {
+        margin: 0;
+      }
+      /* vw - view width */
+      /* vh - view height */
+      .box {
+        /* 100% ekrano plocio */
+        width: 100vw;
+        /* 100% ekrano aukscio */
+        height: 100vh;
+
+        background-color: darkred;
+      }
+
+      .color2 {
+        background-color: yellow;
+      }
+
+      .content-element {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: brown;
+      }
+
+      .modal {
+        background-color: burlywood;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+      }
+
+      /* 1rem = root(html) element šrifto dydžiuiu. Default font-size: 16px. Bet gali būti pakeistas */
+      .box-rem {
+        width: 10rem;
+        height: 10rem;
+        background-color: coral;
+      }
+
+      .box-parent {
+        font-size: 20px;
+      }
+
+      /* 1em = tėvinio elemento šrifto dydis */
+      .box-em {
+        width: 10em;
+        height: 10em;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box color2"></div>
+
+    <div class="content-element">
+      <div class="modal"></div>
+    </div>
+
+    <div class="box-rem"></div>
+    <div class="box-parent">
+      <div class="box-em"></div>
+    </div>
+  </body>
+</html>
